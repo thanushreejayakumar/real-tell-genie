@@ -29,7 +29,7 @@ export const Route = createFileRoute("/api/analyze")({
             );
           }
 
-          const apiKey = process.env.OPENROUTER_API_KEY;
+          const apiKey = import.meta.env.OPENROUTER_API_KEY;
 
           if (!apiKey) {
             throw new Error("Missing OpenRouter API key");
